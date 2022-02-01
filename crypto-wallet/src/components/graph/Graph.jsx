@@ -12,7 +12,7 @@ const Graph = () => {
       alignItems="center"
     >
       <p className="graphText">Your Portfolio:</p>
-      <div className="balanceContainer">displayBalance()</div>
+      <div className="graphContainer">displayBalance()</div>
     </Stack>
   );
 };

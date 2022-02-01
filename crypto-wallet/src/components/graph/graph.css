@@ -8,7 +8,7 @@
   padding-top: 3rem;
 }
 
-.balanceContainer {
+.graphContainer {
   display: grid;
   grid-column-start: [graph];
   grid-column-end: [endSpacing];
@@ -30,19 +30,19 @@
 }
 
 .graphText,
-.balanceContainer {
+.graphContainer {
   font-weight: 500;
 }
 
 @media screen and (max-width: 1120px) {
-    .balanceContainer {
+    .graphContainer {
         width: 15rem;
         height: 15rem;
     }
 }
   
   @media screen and (min-width: 1121px) {
-    .balanceContainer {
+    .graphContainer {
         width: 20vw;
         height: 20vw;
         min-width: 15rem;
