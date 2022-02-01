@@ -14,7 +14,8 @@ const Navbar = () => {
     <Box
       sx={{
         minHeight: "100vh",
-        width: 120,
+        minWidth: 90,
+        maxWidth: "10rem",
         top: 0,
         left: 0,
         backgroundColor: "#282829",
