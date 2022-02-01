@@ -1,0 +1,11 @@
+.gridContainer {
+    display: grid;
+    grid-template-columns: [navbar] 10vw [contentArea] 80vw [endSpacing] 10vw;
+  }
+  
+  .contentContainer {
+    display: grid;
+    color: #bdbdbd;
+    grid-column-start: [contentArea];
+    grid-column-end: [endSpacing];
+  }

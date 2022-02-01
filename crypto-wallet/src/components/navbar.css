@@ -1,0 +1,27 @@
+.navbar {
+    display: grid;
+    grid-column-start: [navbar];
+    grid-column-end: [contentArea];
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    flex-grow: 1;
+  }
+  
+  .navbar-text {
+    color: #bdbdbd;
+  }
+  
+  .navbar-text:hover {
+    color: #cfd1d1;
+  }
+  
+  .navbarLogo {
+    justify-content: start;
+    top: 0px;
+    left: 0px;
+    height: 4vw;
+    min-height: 100px;
+  }
