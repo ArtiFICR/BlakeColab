@@ -1,13 +1,29 @@
+/* 
+This is for assistance with styling
+Adds a border around all elements of a page
+
+* {
+    border: 0.5px solid;
+    border-color: rgb(255, 171, 171);
+}
+
+*/
+
 .gridContainer {
     display: grid;
     grid-template-columns: [navbar] 10vw [contentArea] 80vw [endSpacing] 10vw;
+    grid-template-rows: [header] 5vh [indexContent] 95vh;
+    color: #bdbdbd;
+}
+
+.contentContainer, .balanceContainer, .indexContainer {
+    justify-content: center;
 }
   
 .contentContainer {
     display: grid;
     color: #bdbdbd;
     text-align: center;
-    justify-content: center;
     grid-column-start: [contentArea];
     grid-column-end: [endSpacing];
 }
@@ -16,4 +32,17 @@
     display: flex;
     font-weight: bold;
     font-size: 20px;
+}
+
+.indexContainer {
+    display: block;
+    position: relative;
+    color: #bdbdbd;
+    text-align: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.chartContainer {
+    padding-top: 7rem;
 }

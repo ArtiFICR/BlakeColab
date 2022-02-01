@@ -22,13 +22,15 @@
   justify-content: start;
   top: 0px;
   left: 0px;
-  height: 2vw;
-  min-height: 80px;
   padding-top: 1vh;
 
 }
 
 @media screen and (max-width: 1120px) {
+  .navbarLogo {
+    width: 4rem;
+    height: 4rem;
+  }
   .text {
     display: none;
   }
@@ -38,6 +40,10 @@
 }
 
 @media screen and (min-width: 1121px) {
+  .navbarLogo {
+    width: 5rem;
+    height: 5rem;
+  }
   .text {
     display: inline-block;
   }
