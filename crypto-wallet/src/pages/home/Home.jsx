@@ -1,6 +1,7 @@
 import Navbar from "../../components/navbar/Navbar";
 import WalletBalance from "../../components/walletbalance/WalletBalance";
-import GetIndexPrice from "../../components/walletbalance/GetIndexPrice";
+import GetIndexPrice from "../../components/getindexprice/GetIndexPrice";
+import { Stack } from "@mui/material";
 
 import "../../styles/gridStyles.css";
 
@@ -9,27 +10,31 @@ const Home = () => {
     <div className="container">
       <div className="gridContainer">
         <Navbar />
-        <div className="contentContainer">
-          <h1>Home</h1>
-          <span className="balanceContainer">
-            <p>Current balance: $</p>
-            <WalletBalance />
-          </span>
-          <div className="indexContainer">
-            <div className="chartContainer">
-              Bitcoin (BTC):
-              <GetIndexPrice />
-            </div>
-            <div className="chartContainer">
-              Ethereum (ETH):
-              <GetIndexPrice />
-            </div>
-            <div className="chartContainer">
-              Doge (DOGE):
-              <GetIndexPrice />
+          <div className="contentContainer">
+            <h1>Home</h1>
+            <span className="balanceContainer">
+              <p>Current balance: $</p>
+              <WalletBalance />
+            </span>
+            <div className="indexContainer">
+            <Stack
+              spacing={20}
+            >
+              <div className="chartContainer">
+                Bitcoin (BTC):
+                <GetIndexPrice />
+              </div>
+              <div className="chartContainer">
+                Ethereum (ETH):
+                <GetIndexPrice />
+              </div>
+              <div className="chartContainer">
+                Doge (DOGE):
+                <GetIndexPrice />
+              </div>
+            </Stack>
             </div>
           </div>
-        </div>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import Navbar from "../../components/navbar/Navbar";
+import Graph from "../../components/graph/Graph";
 
 import "../../styles/gridStyles.css";
 
@@ -9,6 +10,7 @@ const Portfolio = () => {
         <Navbar />
         <div className="contentContainer">
           <h1>Portfolio</h1>
+          <Graph />
         </div>
       </div>
     </div>

@@ -19,7 +19,8 @@ Adds a border around all elements of a page
 .contentContainer, .balanceContainer, .indexContainer {
     justify-content: center;
 }
-  
+
+
 .contentContainer {
     display: grid;
     color: #bdbdbd;
@@ -41,8 +42,5 @@ Adds a border around all elements of a page
     text-align: center;
     align-items: center;
     font-size: 20px;
-}
-
-.chartContainer {
-    padding-top: 7rem;
+    padding-top: 6rem;
 }
