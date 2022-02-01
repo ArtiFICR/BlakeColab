@@ -1,18 +1,18 @@
-import Navbar from "../../components/Navbar";
+import Navbar from "../../components/navbar/Navbar";
 
 import "../../styles/gridStyles.css";
 
-const Services = () => {
+const Settings = () => {
   return (
     <div className="container">
       <div className="gridContainer">
         <Navbar />
         <div className="contentContainer">
-          <h1>Services</h1>
+          <h1>Settings</h1>
         </div>
       </div>
     </div>
   );
 };
 
-export default Services;
+export default Settings;

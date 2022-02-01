@@ -1,11 +1,19 @@
 .gridContainer {
     display: grid;
     grid-template-columns: [navbar] 10vw [contentArea] 80vw [endSpacing] 10vw;
-  }
+}
   
-  .contentContainer {
+.contentContainer {
     display: grid;
     color: #bdbdbd;
+    text-align: center;
+    justify-content: center;
     grid-column-start: [contentArea];
     grid-column-end: [endSpacing];
-  }
+}
+
+.balanceContainer {
+    display: flex;
+    font-weight: bold;
+    font-size: 20px;
+}

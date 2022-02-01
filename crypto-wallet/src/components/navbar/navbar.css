@@ -1,0 +1,57 @@
+.navbar {
+  display: grid;
+  grid-column-start: [navbar];
+  grid-column-end: [contentArea];
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  flex-grow: 1;
+}
+
+.navbar-text {
+  color: #bdbdbd;
+}
+
+.navbar-text:hover {
+  color: #cfd1d1;
+}
+
+.navbarLogo {
+  justify-content: start;
+  top: 0px;
+  left: 0px;
+  height: 2vw;
+  min-height: 80px;
+  padding-top: 1vh;
+
+}
+
+@media screen and (max-width: 750px) {
+  .text {
+    display: none;
+  }
+  .icon {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 751px) {
+  .text {
+    display: inline-block;
+  }
+  .icon {
+    display: none;
+  }
+}
+
+.iconSettings {
+  height: 30px;
+  width: 30px;
+  color: white;
+}
+
+.navbarLogo, .iconSettings {
+  filter: invert(75%);
+}

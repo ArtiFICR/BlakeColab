@@ -4,7 +4,7 @@ import reportWebVitals from "./reportWebVitals";
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Portfolio from "./pages/portfolio/Portfolio";
-import Services from "./pages/services/Services";
+import Settings from "./pages/settings/Settings";
 import Contact from "./pages/contact/Contact";
 import "./index.css";
 
@@ -14,7 +14,7 @@ ReactDOM.render(
       <Route path="/" element={<Home />} />
       <Route path="pages/about" element={<About />} />
       <Route path="pages/portfolio" element={<Portfolio />} />
-      <Route path="pages/services" element={<Services />} />
+      <Route path="pages/settings" element={<Settings />} />
       <Route path="pages/contact" element={<Contact />} />
     </Routes>
   </BrowserRouter>,
