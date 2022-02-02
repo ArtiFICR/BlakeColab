@@ -4,6 +4,7 @@ import GetIndexPrice from "../../components/getindexprice/GetIndexPrice";
 import { Stack, Select, FormControl, MenuItem, Box, InputLabel } from "@mui/material";
 
 import "../../styles/gridStyles.css";
+import './home.css';
 
 const Home = () => {
   return (
@@ -15,36 +16,38 @@ const Home = () => {
             <span className="balanceContainer">
               <p>Total assets: $</p>
               <WalletBalance />
-              <Box sx={{ minWidth: 120 }}>
-                <FormControl fullWidth>
-                  <InputLabel id="demo-simple-select-label">Filter by</InputLabel>
-                  <Select
-                    labelId="crypto-select-label"
-                    id="crypto-select"
-                    label="Cryptos"
-                  >
-                    <MenuItem value={10}>Bitcoin</MenuItem>
-                    <MenuItem value={20}>Ethereum</MenuItem>
-                    <MenuItem value={30}>Dogecoin</MenuItem>
-                  </Select>
-                </FormControl>
-              </Box>
+              <span className="dropdownContainer">
+                <Box sx={{ minWidth: 120 }}>
+                  <FormControl fullWidth>
+                    <InputLabel id="crypto-select-label">Filter by</InputLabel>
+                    <Select
+                      labelId="crypto-select-label"
+                      id="crypto-select"
+                      label="Cryptos"
+                    >
+                      <MenuItem value={10}>Bitcoin</MenuItem>
+                      <MenuItem value={20}>Ethereum</MenuItem>
+                      <MenuItem value={30}>Dogecoin</MenuItem>
+                    </Select>
+                  </FormControl>
+                </Box>
+              </span>
             </span>
             <div className="indexContainer">
             <Stack
               spacing={20}
             >
               <div className="chartContainer">
-                Bitcoin (BTC):
-                <GetIndexPrice />
+                <p className="chartTitle">Bitcoin (BTC):</p>
+                <p className="cryptoValue">{GetIndexPrice('BTC')}</p>
               </div>
               <div className="chartContainer">
-                Ethereum (ETH):
-                <GetIndexPrice />
+                <p className="chartTitle">Ethereum (ETH):</p>
+                <p className="cryptoValue">{GetIndexPrice('ETH')}</p>
               </div>
               <div className="chartContainer">
-                Dogecoin (DOGE):
-                <GetIndexPrice />
+                <p className="chartTitle">Dogecoin (DOGE):</p>
+                <p className="cryptoValue">{GetIndexPrice('DOGE')}</p>
               </div>
             </Stack>
             </div>

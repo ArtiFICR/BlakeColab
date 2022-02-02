@@ -1,0 +1,17 @@
+.dropdownContainer {
+    padding-left: 1rem;
+    color: #bdbdbd;
+}
+
+.chartContainer {
+    float: left;
+    border: 1px solid #929292;
+}
+
+.chartTitle {
+    padding-right: 0.15rem;
+}
+
+.chartTitle, .cryptoValue {
+    display: inline-block;
+}
