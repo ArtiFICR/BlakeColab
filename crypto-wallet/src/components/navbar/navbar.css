@@ -14,8 +14,9 @@
   color: #bdbdbd;
 }
 
-.navbar-text:hover {
+.text:hover {
   color: #cfd1d1;
+  text-decoration: underline;
 }
 
 .navbarLogo {
