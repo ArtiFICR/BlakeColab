@@ -1,7 +1,7 @@
 import Navbar from "../../components/navbar/Navbar";
 import WalletBalance from "../../components/walletbalance/WalletBalance";
 import GetIndexPrice from "../../components/getindexprice/GetIndexPrice";
-import { Stack } from "@mui/material";
+import { Stack, Select, FormControl, MenuItem, Box, InputLabel } from "@mui/material";
 
 import "../../styles/gridStyles.css";
 
@@ -13,8 +13,22 @@ const Home = () => {
           <div className="contentContainer">
             <h1>Home</h1>
             <span className="balanceContainer">
-              <p>Current balance: $</p>
+              <p>Total assets: $</p>
               <WalletBalance />
+              <Box sx={{ minWidth: 120 }}>
+                <FormControl fullWidth>
+                  <InputLabel id="demo-simple-select-label">Filter by</InputLabel>
+                  <Select
+                    labelId="crypto-select-label"
+                    id="crypto-select"
+                    label="Cryptos"
+                  >
+                    <MenuItem value={10}>Bitcoin</MenuItem>
+                    <MenuItem value={20}>Ethereum</MenuItem>
+                    <MenuItem value={30}>Dogecoin</MenuItem>
+                  </Select>
+                </FormControl>
+              </Box>
             </span>
             <div className="indexContainer">
             <Stack
@@ -29,7 +43,7 @@ const Home = () => {
                 <GetIndexPrice />
               </div>
               <div className="chartContainer">
-                Doge (DOGE):
+                Dogecoin (DOGE):
                 <GetIndexPrice />
               </div>
             </Stack>

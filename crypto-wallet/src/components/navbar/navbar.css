@@ -26,10 +26,15 @@
 
 }
 
+.navbar-tab {
+  align-items: center;
+  justify-content: center;
+}
+
 @media screen and (max-width: 1120px) {
   .navbarLogo {
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
   }
   .text {
     display: none;
@@ -44,17 +49,25 @@
     width: 5rem;
     height: 5rem;
   }
-  .text {
+  .text, .icon {
     display: inline-block;
+    vertical-align: middle;
   }
+  .text {
+    position: relative;
+    padding-left: 0.3rem;
+    padding-bottom: 0.45rem;
+  }
+  /*
   .icon {
     display: none;
   }
+  */
 }
 
 .iconSettings {
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   color: white;
 }
 

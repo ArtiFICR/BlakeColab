@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import homeIcon from "../../assets/home.png";
-import aboutIcon from "../../assets/about.png";
+import tradeIcon from "../../assets/trade.png";
 import portfolioIcon from "../../assets/portfolio.png";
 import settingsIcon from "../../assets/settings.png";
 import contactIcon from "../../assets/contact.png";
@@ -14,7 +14,7 @@ const Navbar = () => {
     <Box
       sx={{
         minHeight: "100vh",
-        minWidth: 90,
+        minWidth: 60,
         maxWidth: "10rem",
         top: 0,
         left: 0,
@@ -31,24 +31,25 @@ const Navbar = () => {
           >
             <img className="navbarLogo" src={logo} alt="Logo" />
             <Link to="/" className="navbar-text">
-              <span className="text">Home</span>
               <span className="icon"><img className="iconSettings" src={homeIcon} alt=""/></span>
+              <span className="text">Home</span>
             </Link>
-            <Link to="/pages/about" className="navbar-text">
-              <span className="text">About</span>
-              <span className="icon"><img className="iconSettings" src={aboutIcon} alt=""/></span>
+            <Link to="/pages/trade" className="navbar-text">
+              <span className="icon"><img className="iconSettings" src={tradeIcon} alt="$"/></span>
+              <span className="text">Trade</span>
+              {/*<span className="icon"><img className="iconSettings" src={aboutIcon} alt="$"/></span>*/}
             </Link>
             <Link to="/pages/portfolio" className="navbar-text">
-              <span className="text">Portfolio</span>
               <span className="icon"><img className="iconSettings" src={portfolioIcon} alt=""/></span>
+              <span className="text">Portfolio</span>
             </Link>
             <Link to="/pages/settings" className="navbar-text">
-              <span className="text">Settings</span>
               <span className="icon"><img className="iconSettings" src={settingsIcon} alt=""/></span>
+              <span className="text">Settings</span>
             </Link>
             <Link to="/pages/contact" className="navbar-text">
-              <span className="text">Contact</span>
               <span className="icon"><img className="iconSettings" src={contactIcon} alt=""/></span>
+              <span className="text">Contact</span>
             </Link>
           </Stack>
         </div>
