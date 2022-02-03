@@ -1,0 +1,14 @@
+.portfolioList {
+    position: relative;
+    margin-right: 4rem;
+    right: 4rem;
+    top: 7rem;
+}
+
+.listHeader {
+    text-align: center;
+}
+
+.listItems {
+    border: 1px solid gray;
+}

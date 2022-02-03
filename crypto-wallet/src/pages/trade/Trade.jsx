@@ -4,15 +4,15 @@ import "../../styles/gridStyles.css";
 import "./trade.css";
 
 function Buy() {
-  return alert('Buy')
+  return <div>Buy!!!</div>
 }
 
 function Sell() {
-  return alert('Sell')
+  return <div>Sell!!!</div>
 }
 
 function Convert() {
-  return alert('Convert')
+  return <div>Convert!!!</div>
 }
 
 const Trade = () => {
@@ -31,9 +31,9 @@ const Trade = () => {
             />
           </div>
           <div className="buttonContainer">
-            <button onClick={Buy}>Buy</button>
-            <button onClick={Sell}>Sell</button>
-            <button onClick={Convert}>Convert</button>
+            <button onClick={Buy()}>Buy</button>
+            <button onClick={Sell()}>Sell</button>
+            <button onClick={Convert()}>Convert</button>
           </div>
           <div className="listContainer">
             <ul className="cryptoList"></ul>
