@@ -28,8 +28,12 @@ const Navbar = () => {
             spacing={10}
             justifyContent="center"
             alignItems="center"
-          >
-            <img className="navbarLogo" src={logo} alt="Logo" />
+          > 
+            <div className="logoHeader">
+              <img className="navbarLogo" src={logo} alt="Logo" />
+              <span className="logoText">Crypto Wallet</span>
+            </div>
+
             <Link to="/" className="navbar-text">
               <span className="icon"><img className="iconSettings" src={homeIcon} alt=""/></span>
               <span className="text">Home</span>

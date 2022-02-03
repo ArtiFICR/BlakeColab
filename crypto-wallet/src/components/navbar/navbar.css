@@ -7,10 +7,9 @@
   color: white;
   font-weight: 500;
   font-size: 20px;
-  flex-grow: 1;
 }
 
-.navbar-text {
+.navbar-text, .logoText {
   color: #bdbdbd;
 }
 
@@ -20,11 +19,10 @@
 }
 
 .navbarLogo {
-  justify-content: start;
+  display: flex;
+  vertical-align: middle;
   top: 0px;
-  left: 0px;
   padding-top: 1vh;
-
 }
 
 .navbar-tab {
@@ -36,6 +34,9 @@
   .navbarLogo {
     width: 3rem;
     height: 3rem;
+  }
+  .logoText {
+    display: none;
   }
   .text {
     display: none;
@@ -49,8 +50,10 @@
   .navbarLogo {
     width: 5rem;
     height: 5rem;
+    align-items: center;
+    padding-left: 1.25vh;
   }
-  .text, .icon {
+  .text, .icon, .iconText {
     display: inline-block;
     vertical-align: middle;
   }
@@ -59,11 +62,9 @@
     padding-left: 0.3rem;
     padding-bottom: 0.45rem;
   }
-  /*
-  .icon {
-    display: none;
+  .logoText {
+    font-size: medium;
   }
-  */
 }
 
 .iconSettings {

@@ -1,4 +1,57 @@
+button {
+    background-color: #949494;
+    padding: 0.3rem 1.3rem 0.3rem 1.3rem;
+    margin-right: 1rem;
+    border: 1.5px solid rgb(56, 56, 56);
+    border-radius: 3px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.contentContainer {
+    margin-left: 9vw;
+}
+
+.searchBar {
+    padding-bottom: 2rem;
+}
+
 .buttonContainer {
     display: inline-block;
     padding-right: 3px;
+}
+
+.listContainer {
+    position: absolute;
+}
+
+@media screen and (max-width: 1120px) {
+    .cryptoList {
+        display: grid;
+        position: fixed;
+        border: solid black 1px;
+        border-radius: 5px;
+        background-color: #e4e4e4;
+        bottom: 0px;
+        top: 10.5rem;
+        right: 10px;
+        left: 13vw;
+        min-width: 77vw;
+    }
+}
+
+@media screen and (min-width: 1121px) {
+    .cryptoList {
+        display: grid;
+        position: fixed;
+        border: solid black 1px;
+        border-radius: 5px;
+        background-color: #e4e4e4;
+        bottom: 0px;
+        top: 10.5rem;
+        right: 10px;
+        left: 10.8vw;
+    }
 }

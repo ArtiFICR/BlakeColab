@@ -22,16 +22,21 @@ const Trade = () => {
         <Navbar />
         <div className="contentContainer">
           <h1>Trade</h1>
-          <input 
-            type="text"
-            id="asset-search"
-            placeholder="Searh for cryptos"
-            name="crypto-search"
-          />
+          <div className="searchBar">
+            <input 
+              type="text"
+              id="asset-search"
+              placeholder="Searh for cryptos"
+              name="crypto-search"
+            />
+          </div>
           <div className="buttonContainer">
             <button onClick={Buy}>Buy</button>
             <button onClick={Sell}>Sell</button>
             <button onClick={Convert}>Convert</button>
+          </div>
+          <div className="listContainer">
+            <ul className="cryptoList"></ul>
           </div>
         </div>
       </div>
