@@ -14,8 +14,6 @@ const Navbar = () => {
     <Box
       sx={{
         minHeight: "100vh",
-        minWidth: 60,
-        maxWidth: "10rem",
         top: 0,
         left: 0,
         backgroundColor: "#282829",
@@ -25,7 +23,7 @@ const Navbar = () => {
         <div className="tabContainer">
           <Stack
             direction="column"
-            spacing={10}
+            spacing={8}
             justifyContent="center"
             alignItems="center"
           > 

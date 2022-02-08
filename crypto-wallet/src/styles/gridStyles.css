@@ -14,6 +14,7 @@ Adds a border around all elements of a page
     grid-template-columns: [navbar] 10vw [contentArea] 80vw [endSpacing] 10vw;
     grid-template-rows: [header] 5vh [indexContent] 95vh;
     color: #bdbdbd;
+    height: 100%;
 }
 
 .contentContainer, .balanceContainer, .indexContainer {

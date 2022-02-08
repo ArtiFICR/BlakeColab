@@ -1,11 +1,17 @@
 .dropdownContainer {
     padding-left: 1rem;
-    color: #bdbdbd;
+    color: #8a8a8a;
 }
 
 .chartContainer {
-    float: left;
+    position: fixed;
     border: 1px solid #929292;
+    right: 1.35vw;
+    bottom: 1rem;
+    top: 11.5rem;
+    left: 11.3vw;
+    background-color: #7c7c7c;
+    color: #d4d4d4;
 }
 
 .chartTitle {
@@ -15,3 +21,16 @@
 .chartTitle, .cryptoValue {
     display: inline-block;
 }
+/*
+@media screen and (max-width: 1120px) {
+  .chartContainer {
+    left: 10.5vw;
+  }
+}
+
+@media screen and (min-width: 1121px) {
+  .chartContainer {
+    left: 10.5vw;
+  }
+}
+*/

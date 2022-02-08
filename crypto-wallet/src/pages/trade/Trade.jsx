@@ -1,4 +1,5 @@
 import Navbar from "../../components/navbar/Navbar";
+//import HandleTrade from "../../components/handleTrade/HandleTrade";
 
 import "../../styles/gridStyles.css";
 import "./trade.css";
@@ -31,12 +32,13 @@ const Trade = () => {
             />
           </div>
           <div className="buttonContainer">
-            <button onClick={Buy()}>Buy</button>
-            <button onClick={Sell()}>Sell</button>
-            <button onClick={Convert()}>Convert</button>
-          </div>
-          <div className="listContainer">
-            <ul className="cryptoList"></ul>
+            <button id="Buy" onClick={Buy()}>Buy</button>
+            <button id="Sell" onClick={Sell()}>Sell</button>
+            <button id="Convert" onClick={Convert()}>Convert</button>
+            <div className="listContainer">
+              {/*HandleTrade(this.id)*/}
+              <ul className="cryptoList"></ul>
+            </div>
           </div>
         </div>
       </div>

@@ -1,9 +1,9 @@
 button {
-    background-color: #949494;
-    padding: 0.3rem 1.3rem 0.3rem 1.3rem;
+    background-color: #d1d1d1;
+    padding: 0.35rem 1.35rem 0.35rem 1.35rem;
     margin-right: 1rem;
-    border: 1.5px solid rgb(56, 56, 56);
-    border-radius: 3px;
+    border: 1px solid #afafaf;
+    border-radius: 2px;
 }
 
 button:hover {
@@ -27,16 +27,18 @@ button:hover {
     position: absolute;
 }
 
+.cryptoList {
+    display: grid;
+    position: fixed;
+    border: 1px solid #929292;
+    background-color: #7c7c7c;
+    bottom: 0px;
+    top: 10.5rem;
+    right: 10px;
+}
+
 @media screen and (max-width: 1120px) {
     .cryptoList {
-        display: grid;
-        position: fixed;
-        border: solid black 1px;
-        border-radius: 5px;
-        background-color: #e4e4e4;
-        bottom: 0px;
-        top: 10.5rem;
-        right: 10px;
         left: 13vw;
         min-width: 77vw;
     }
@@ -44,14 +46,6 @@ button:hover {
 
 @media screen and (min-width: 1121px) {
     .cryptoList {
-        display: grid;
-        position: fixed;
-        border: solid black 1px;
-        border-radius: 5px;
-        background-color: #e4e4e4;
-        bottom: 0px;
-        top: 10.5rem;
-        right: 10px;
         left: 10.8vw;
     }
 }

@@ -1,12 +1,19 @@
+import React from "react";
 import Navbar from "../../components/navbar/Navbar";
 import WalletBalance from "../../components/walletbalance/WalletBalance";
-import GetIndexPrice from "../../components/getindexprice/GetIndexPrice";
-import { Stack, Select, FormControl, MenuItem, Box, InputLabel } from "@mui/material";
+import { Select, FormControl, MenuItem, Box, FormHelperText } from "@mui/material";
+import FilterAsset from "../../components/filterasset/FilterAsset";
 
 import "../../styles/gridStyles.css";
 import './home.css';
 
 const Home = () => {
+  const [asset, setAsset] = React.useState('');
+
+  const handleChange = (event) => {
+    setAsset(event.target.value);
+  }
+
   return (
     <div className="container">
       <div className="gridContainer">
@@ -17,39 +24,25 @@ const Home = () => {
               <p>Total assets: $</p>
               <WalletBalance />
               <span className="dropdownContainer">
-                <Box sx={{ minWidth: 120 }}>
+                <Box sx={{ minWidth: 100 }}>
                   <FormControl fullWidth>
-                    <InputLabel id="crypto-select-label">Filter by</InputLabel>
                     <Select
-                      labelId="crypto-select-label"
-                      id="crypto-select"
-                      label="Cryptos"
+                      value={asset}
+                      onChange={handleChange}
+                      displayEmpty
+                      inputProps={{ 'aria-label': 'Without label' }}
                     >
-                      <MenuItem value={10}>Bitcoin</MenuItem>
-                      <MenuItem value={20}>Ethereum</MenuItem>
-                      <MenuItem value={30}>Dogecoin</MenuItem>
+                      <MenuItem value={"BTC"}>Bitcoin</MenuItem>
+                      <MenuItem value={"ETH"}>Ethereum</MenuItem>
+                      <MenuItem value={"DOGE"}>Dogecoin</MenuItem>
                     </Select>
+                    <FormHelperText>Select Asset</FormHelperText>
                   </FormControl>
                 </Box>
               </span>
             </span>
             <div className="indexContainer">
-            <Stack
-              spacing={20}
-            >
-              <div className="chartContainer">
-                <p className="chartTitle">Bitcoin (BTC):</p>
-                <p className="cryptoValue">{GetIndexPrice('BTC')}</p>
-              </div>
-              <div className="chartContainer">
-                <p className="chartTitle">Ethereum (ETH):</p>
-                <p className="cryptoValue">{GetIndexPrice('ETH')}</p>
-              </div>
-              <div className="chartContainer">
-                <p className="chartTitle">Dogecoin (DOGE):</p>
-                <p className="cryptoValue">{GetIndexPrice('DOGE')}</p>
-              </div>
-            </Stack>
+              {FilterAsset(asset)}
             </div>
           </div>
       </div>
