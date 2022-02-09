@@ -21,7 +21,7 @@ const Home = () => {
           <div className="contentContainer">
             <h1>Home</h1>
             <span className="balanceContainer">
-              <p>Total assets: $</p>
+              <p className="balanceText">Total assets:</p>
               <WalletBalance />
               <span className="dropdownContainer">
                 <Box sx={{ minWidth: 100 }}>
@@ -42,7 +42,9 @@ const Home = () => {
               </span>
             </span>
             <div className="indexContainer">
-              {FilterAsset(asset)}
+              <div className="chartContainer">
+                {FilterAsset(asset)}
+              </div>
             </div>
           </div>
       </div>

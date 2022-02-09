@@ -1,4 +1,5 @@
 import { Stack } from "@mui/material";
+import WalletBalance from "../walletbalance/WalletBalance";
 
 import "./graph.css";
 
@@ -12,7 +13,7 @@ const Graph = () => {
       alignItems="center"
     >
       <p className="graphText">Your Portfolio:</p>
-      <div className="graphContainer">displayBalance()</div>
+      <div className="graphContainer"><WalletBalance /></div>
     </Stack>
   );
 };

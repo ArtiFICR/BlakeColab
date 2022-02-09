@@ -1,20 +1,9 @@
 import Navbar from "../../components/navbar/Navbar";
-//import HandleTrade from "../../components/handleTrade/HandleTrade";
+import HandleTrade from "../../components/handleTrade/HandleTrade";
+import { Button } from "@mui/material";
 
 import "../../styles/gridStyles.css";
 import "./trade.css";
-
-function Buy() {
-  return <div>Buy!!!</div>
-}
-
-function Sell() {
-  return <div>Sell!!!</div>
-}
-
-function Convert() {
-  return <div>Convert!!!</div>
-}
 
 const Trade = () => {
   return (
@@ -32,12 +21,53 @@ const Trade = () => {
             />
           </div>
           <div className="buttonContainer">
-            <button id="Buy" onClick={Buy()}>Buy</button>
-            <button id="Sell" onClick={Sell()}>Sell</button>
-            <button id="Convert" onClick={Convert()}>Convert</button>
+            <Button
+              sx={{
+                color: "#c7c7c7",
+                border: "1px solid #929292",
+                borderRadius: "2px",
+                backgroundColor: "#7c7c7c",
+                marginRight: "0.5rem"
+              }}
+              variant="outlined"
+              size="small"
+            >
+              Buy
+            </Button>
+            <Button
+              sx={{
+                color: "#c7c7c7",
+                border: "1px solid #929292",
+                borderRadius: "2px",
+                backgroundColor: "#7c7c7c",
+                marginRight: "0.5rem"
+              }}
+              variant="outlined"
+              size="small"
+            >
+              Sell
+            </Button>
+            <Button
+              sx={{
+                color: "#c7c7c7",
+                border: "1px solid #929292",
+                borderRadius: "2px",
+                backgroundColor: "#7c7c7c"
+              }}
+              variant="outlined"
+              size="small"
+            >
+              Convert
+            </Button>
+            {/* 
+            <button id="Buy" onClick={GetButtonId(document.getElementById("Buy"))}>Buy</button>
+            <button id="Sell" onClick={GetButtonId(document.getElementById("Sell"))}>Sell</button>
+            <button id="Convert" onClick={GetButtonId(document.getElementById("Convert"))}>Convert</button>
+            */}
             <div className="listContainer">
-              {/*HandleTrade(this.id)*/}
-              <ul className="cryptoList"></ul>
+              <ul className="cryptoList">
+                {HandleTrade()}
+              </ul>
             </div>
           </div>
         </div>

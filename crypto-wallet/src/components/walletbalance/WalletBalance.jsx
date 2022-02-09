@@ -1,7 +1,11 @@
+import GetBalance from "../getbalance/GetBalance";
+
+import './walletbalance.css';
+
 const WalletBalance = () => {
     return(
         <div className="balanceText">
-            <p>1000</p>
+            <p>${GetBalance()}</p>
         </div>
     );
 }

@@ -1,23 +1,28 @@
-export default function HandleTrade(id) {
-   if (id === "Buy") {
-      return (
-        <div>
-          <p>Buy!!!</p>
-        </div>
-      )
-    }
-    else if (id === "Sell") {
-        return (
-            <div>
-              <p>Sell!!!</p>
-            </div>
-          )
-    }
-    else if (id === "Convert") {
-        return (
-            <div>
-              <p>Convert!!!</p>
-            </div>
-          )
-    }
+export default function HandleTrade() {
+  /*if (id === "Buy") {
+    return (
+      <>
+        <p>Buy!!!</p>
+      </>
+    );
+  }
+  else if (id === "Sell") {
+    return (
+      <>
+        <p>Sell!!!</p>
+      </>
+    );
+  }
+  else if (id === "Convert") {
+    return (
+      <>
+        <p>Convert!!!</p>
+      </>
+    );
+  }*/
+  return (
+    <>
+      <p>Buy!!!</p>
+    </>
+  );
 }

@@ -21,6 +21,10 @@
 .chartTitle, .cryptoValue {
     display: inline-block;
 }
+
+.balanceText {
+  padding-right: 0.5rem;
+}
 /*
 @media screen and (max-width: 1120px) {
   .chartContainer {
