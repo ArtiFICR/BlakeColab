@@ -1,26 +1,33 @@
-button {
-    background-color: #d1d1d1;
-    padding: 0.35rem 1.35rem 0.35rem 1.35rem;
-    margin-right: 1rem;
-    border: 1px solid #afafaf;
-    border-radius: 2px;
+.tradeHeader {
+    display: flex;
+    border-bottom: 2px solid #aaaaaa;
 }
 
-button:hover {
-    cursor: pointer;
-}
-
-.contentContainer {
-    margin-left: 9vw;
-}
-
-.searchBar {
-    padding-bottom: 2rem;
+.headerText {
+    display: flex;
+    flex: 0 0 50%;
+    justify-content: flex-start;
+    margin-left: 1em;
 }
 
 .buttonContainer {
-    display: inline-block;
-    padding-right: 3px;
+    display: flex;
+    flex: 50% 0 0;
+    justify-content: flex-end;
+    padding-top: 2em;
+    padding-right: 1em;
+    padding-bottom: 2em;
+}
+
+.contentContainer {
+    display: flex;
+}
+
+.searchBar {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 1rem;
 }
 
 .listContainer {
@@ -31,7 +38,7 @@ button:hover {
     display: grid;
     position: fixed;
     border: 1px solid #929292;
-    background-color: #7c7c7c;
+    background-color: #888888;
     bottom: 0px;
     top: 10.5rem;
     right: 10px;

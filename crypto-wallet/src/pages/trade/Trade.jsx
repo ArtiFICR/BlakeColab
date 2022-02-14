@@ -1,25 +1,28 @@
 import Navbar from "../../components/navbar/Navbar";
 import HandleTrade from "../../components/handleTrade/HandleTrade";
-import { Button } from "@mui/material";
+import { Button, TextField, createTheme, ThemeProvider } from "@mui/material";
 
 import "../../styles/gridStyles.css";
 import "./trade.css";
 
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#aaaaaa',
+    },
+    secondary: {
+      main: "#cccccc",
+    },
+  },
+});
+
 const Trade = () => {
   return (
-    <div className="container">
-      <div className="gridContainer">
-        <Navbar />
-        <div className="contentContainer">
-          <h1>Trade</h1>
-          <div className="searchBar">
-            <input 
-              type="text"
-              id="asset-search"
-              placeholder="Searh for cryptos"
-              name="crypto-search"
-            />
-          </div>
+    <div className="gridContainer">
+      <Navbar />
+      <div className="tradeContainer">
+        <div className="tradeHeader">
+          <h1 className="headerText">Trade</h1>
           <div className="buttonContainer">
             <Button
               sx={{
@@ -52,23 +55,37 @@ const Trade = () => {
                 color: "#c7c7c7",
                 border: "1px solid #929292",
                 borderRadius: "2px",
-                backgroundColor: "#7c7c7c"
+                backgroundColor: "#7c7c7c",
               }}
               variant="outlined"
               size="small"
             >
               Convert
             </Button>
-            {/* 
-            <button id="Buy" onClick={GetButtonId(document.getElementById("Buy"))}>Buy</button>
-            <button id="Sell" onClick={GetButtonId(document.getElementById("Sell"))}>Sell</button>
-            <button id="Convert" onClick={GetButtonId(document.getElementById("Convert"))}>Convert</button>
-            */}
-            <div className="listContainer">
-              <ul className="cryptoList">
-                {HandleTrade()}
-              </ul>
-            </div>
+          </div>
+        </div>
+        <div className="contentContainer"> 
+          <div className="searchBar">
+            <ThemeProvider theme={theme}>
+              <TextField
+                id="filled-search"
+                label="Search Assets"
+                type="search"
+                size="small"
+                color="primary"
+                InputLabelProps={{
+                  style: { color: '#aaaaaa' },
+                }}
+                InputProps={{
+                  borderColor: '#aaaaaa'
+                }}
+              />
+            </ThemeProvider>
+          </div>
+          <div className="listContainer">
+            <ul className="cryptoList">
+              {HandleTrade()}
+            </ul>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
-import homeIcon from "../../assets/home.png";
+import assetsIcon from "../../assets/assets.png";
 import tradeIcon from "../../assets/trade.png";
 import portfolioIcon from "../../assets/portfolio.png";
 import settingsIcon from "../../assets/settings.png";
@@ -33,8 +33,8 @@ const Navbar = () => {
             </div>
 
             <Link to="/" className="navbar-text">
-              <span className="icon"><img className="iconSettings" src={homeIcon} alt=""/></span>
-              <span className="text">Home</span>
+              <span className="icon"><img className="iconSettings" src={assetsIcon} alt=""/></span>
+              <span className="text">Assets</span>
             </Link>
             <Link to="/pages/trade" className="navbar-text">
               <span className="icon"><img className="iconSettings" src={tradeIcon} alt="$"/></span>

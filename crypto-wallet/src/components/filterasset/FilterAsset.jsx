@@ -1,6 +1,6 @@
 import GetIndexPrice from "../getindexprice/GetIndexPrice";
 
-import "../../pages/home/home.css";
+import "../../pages/assets/assets.css";
 
 export default function FilterAsset(asset) {
   if (asset === "BTC") {

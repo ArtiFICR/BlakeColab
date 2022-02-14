@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
-import Home from "./pages/home/Home";
+import Assets from "./pages/assets/Assets";
 import Trade from "./pages/trade/Trade";
 import Portfolio from "./pages/portfolio/Portfolio";
 import Settings from "./pages/settings/Settings";
@@ -12,7 +12,7 @@ import "./index.css";
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Assets />} />
       <Route path="pages/trade" element={<Trade />} />
       <Route path="pages/portfolio" element={<Portfolio />} />
       <Route path="pages/settings" element={<Settings />} />

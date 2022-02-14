@@ -1,6 +1,27 @@
-.dropdownContainer {
-    padding-left: 1rem;
-    color: #8a8a8a;
+.assetHeader {
+  display: flex;
+  border-bottom: 2px solid #aaaaaa;
+}
+
+.headerText {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 1em;
+}
+
+.balanceContainer {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+  padding-top: 1rem;
+}
+
+.balanceText {
+  padding-right: 0.5rem;
+  font-size: medium;
+  font-weight: normal;
 }
 
 .chartContainer {
@@ -10,7 +31,7 @@
     bottom: 1rem;
     top: 11.5rem;
     left: 11.3vw;
-    background-color: #7c7c7c;
+    background-color: #888888;
     color: #d4d4d4;
 }
 
@@ -22,9 +43,6 @@
     display: inline-block;
 }
 
-.balanceText {
-  padding-right: 0.5rem;
-}
 /*
 @media screen and (max-width: 1120px) {
   .chartContainer {

@@ -11,23 +11,14 @@ Adds a border around all elements of a page
 
 .gridContainer {
     display: grid;
-    grid-template-columns: [navbar] 10vw [contentArea] 80vw [endSpacing] 10vw;
-    grid-template-rows: [header] 5vh [indexContent] 95vh;
+    grid-template-columns: [navbar] 10vw [contentArea] 90vw;
+    grid-template-rows: [header] 5vh [dataArea] 95vh;
     color: #bdbdbd;
     height: 100%;
 }
 
-.contentContainer, .balanceContainer, .indexContainer {
+.balanceContainer, .indexContainer {
     justify-content: center;
-}
-
-
-.contentContainer {
-    display: grid;
-    color: #bdbdbd;
-    text-align: center;
-    grid-column-start: [contentArea];
-    grid-column-end: [endSpacing];
 }
 
 .balanceContainer {
