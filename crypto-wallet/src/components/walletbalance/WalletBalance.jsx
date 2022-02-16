@@ -1,7 +1,5 @@
 import GetBalance from "../getbalance/GetBalance";
 
-import './walletbalance.css';
-
 const WalletBalance = () => {
     return(
         <div className="balanceText">

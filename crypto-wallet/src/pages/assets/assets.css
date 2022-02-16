@@ -1,27 +1,26 @@
-.assetHeader {
-  display: flex;
-  border-bottom: 2px solid #aaaaaa;
-}
-
-.headerText {
-  flex: 0 0 50%;
-  display: flex;
-  justify-content: flex-start;
-  margin-left: 1em;
-}
-
 .balanceContainer {
-  flex: 0 0 50%;
-  display: flex;
-  justify-content: flex-end;
+  display: block;
   margin-left: auto;
-  padding-top: 1rem;
+  margin-right: auto;
 }
 
 .balanceText {
-  padding-right: 0.5rem;
-  font-size: medium;
-  font-weight: normal;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: lighter;
+  padding-right: 0.2em;
+}
+
+.dropdownContainer {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1rem;
+}
+
+.assetList {
+  position: relative;
 }
 
 .chartContainer {

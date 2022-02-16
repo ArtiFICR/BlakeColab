@@ -8,6 +8,7 @@ import contactIcon from "../../assets/contact.png";
 import { Box, Stack } from "@mui/material";
 
 import "./navbar.css";
+import "../../styles/gridStyles.css";
 
 const Navbar = () => {
   return (
@@ -39,19 +40,18 @@ const Navbar = () => {
             <Link to="/pages/trade" className="navbar-text">
               <span className="icon"><img className="iconSettings" src={tradeIcon} alt="$"/></span>
               <span className="text">Trade</span>
-              {/*<span className="icon"><img className="iconSettings" src={aboutIcon} alt="$"/></span>*/}
             </Link>
             <Link to="/pages/portfolio" className="navbar-text">
               <span className="icon"><img className="iconSettings" src={portfolioIcon} alt=""/></span>
               <span className="text">Portfolio</span>
             </Link>
+            <Link to="/pages/pay" className="navbar-text">
+              <span className="icon"><img className="iconSettings" src={contactIcon} alt=""/></span>
+              <span className="text">Pay</span>
+            </Link>
             <Link to="/pages/settings" className="navbar-text">
               <span className="icon"><img className="iconSettings" src={settingsIcon} alt=""/></span>
               <span className="text">Settings</span>
-            </Link>
-            <Link to="/pages/contact" className="navbar-text">
-              <span className="icon"><img className="iconSettings" src={contactIcon} alt=""/></span>
-              <span className="text">Contact</span>
             </Link>
           </Stack>
         </div>

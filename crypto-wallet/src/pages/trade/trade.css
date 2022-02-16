@@ -1,58 +1,6 @@
-.tradeHeader {
-    display: flex;
-    border-bottom: 2px solid #aaaaaa;
-}
-
-.headerText {
-    display: flex;
-    flex: 0 0 50%;
-    justify-content: flex-start;
-    margin-left: 1em;
-}
-
-.buttonContainer {
-    display: flex;
-    flex: 50% 0 0;
-    justify-content: flex-end;
-    padding-top: 2em;
-    padding-right: 1em;
-    padding-bottom: 2em;
-}
-
-.contentContainer {
-    display: flex;
-}
-
 .searchBar {
     display: block;
     margin-right: auto;
     margin-left: auto;
-    padding-top: 1rem;
-}
-
-.listContainer {
-    position: absolute;
-}
-
-.cryptoList {
-    display: grid;
-    position: fixed;
-    border: 1px solid #929292;
-    background-color: #888888;
-    bottom: 0px;
-    top: 10.5rem;
-    right: 10px;
-}
-
-@media screen and (max-width: 1120px) {
-    .cryptoList {
-        left: 13vw;
-        min-width: 77vw;
-    }
-}
-
-@media screen and (min-width: 1121px) {
-    .cryptoList {
-        left: 10.8vw;
-    }
+    padding-top: 1em;
 }

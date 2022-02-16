@@ -1,4 +1,4 @@
-export default function HandleTrade() {
+export default function HandleTrade(asset) {
   /*if (id === "Buy") {
     return (
       <>

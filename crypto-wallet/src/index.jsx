@@ -6,7 +6,7 @@ import Assets from "./pages/assets/Assets";
 import Trade from "./pages/trade/Trade";
 import Portfolio from "./pages/portfolio/Portfolio";
 import Settings from "./pages/settings/Settings";
-import Contact from "./pages/contact/Contact";
+import Pay from "./pages/pay/Pay";
 import "./index.css";
 
 ReactDOM.render(
@@ -15,8 +15,8 @@ ReactDOM.render(
       <Route path="/" element={<Assets />} />
       <Route path="pages/trade" element={<Trade />} />
       <Route path="pages/portfolio" element={<Portfolio />} />
+      <Route path="pages/pay" element={<Pay />} />
       <Route path="pages/settings" element={<Settings />} />
-      <Route path="pages/contact" element={<Contact />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById("root")

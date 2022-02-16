@@ -1,0 +1,18 @@
+.buttonIcon {
+    filter: invert(95%);
+    height: 15px;
+    width: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.buttonText {
+    padding-right: 0.5em;
+    font-size: 0.94em;
+}
+
+@media screen and (max-width: 1120px) {
+    .buttonText {
+        display: none;
+    }
+}

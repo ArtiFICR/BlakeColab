@@ -2,7 +2,14 @@ import GetIndexPrice from "../getindexprice/GetIndexPrice";
 
 import "../../pages/assets/assets.css";
 
-export default function FilterAsset(asset) {
+export default function filterAsset(asset) {
+  return(
+    <>
+      <p className="chartTitle">{asset}</p>
+      <p className="cryptoValue">{GetIndexPrice(asset)}</p>
+    </>
+  )
+  /*
   if (asset === "BTC") {
     return(
       <>
@@ -27,5 +34,6 @@ export default function FilterAsset(asset) {
       </>
     )
   }
+  */
 }
 

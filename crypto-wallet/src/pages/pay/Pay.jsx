@@ -3,16 +3,17 @@ import Header from "../../components/header/Header";
 
 import "../../styles/gridStyles.css";
 
-const Settings = () => {
+const Pay = () => {
   return (
     <div className="gridContainer">
       <Navbar />
-      <div className="settingsContainer">
-        <Header headerText="Settings" />
-        <div className="contentContainer"></div>
+      <div className="contactContainer">
+        <Header headerText="Pay" />
+        <div className="contentContainer">
+        </div>
       </div>
     </div>
   );
 };
 
-export default Settings;
+export default Pay;

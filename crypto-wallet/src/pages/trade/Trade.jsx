@@ -1,78 +1,36 @@
+import React from "react";
 import Navbar from "../../components/navbar/Navbar";
-import HandleTrade from "../../components/handleTrade/HandleTrade";
-import { Button, TextField, createTheme, ThemeProvider } from "@mui/material";
+import Header from "../../components/header/Header";
+import filterAsset from "../../components/filterasset/FilterAsset";
+import { TextField, ThemeProvider } from "@mui/material";
+import getTheme from "../../components/theme/getTheme";
 
 import "../../styles/gridStyles.css";
 import "./trade.css";
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#aaaaaa',
-    },
-    secondary: {
-      main: "#cccccc",
-    },
-  },
-});
-
 const Trade = () => {
+  const [asset, setAsset] = React.useState('');
+
+  const handleChange = (event) => {
+    setAsset(event.target.value);
+  }
+
   return (
     <div className="gridContainer">
       <Navbar />
       <div className="tradeContainer">
-        <div className="tradeHeader">
-          <h1 className="headerText">Trade</h1>
-          <div className="buttonContainer">
-            <Button
-              sx={{
-                color: "#c7c7c7",
-                border: "1px solid #929292",
-                borderRadius: "2px",
-                backgroundColor: "#7c7c7c",
-                marginRight: "0.5rem"
-              }}
-              variant="outlined"
-              size="small"
-            >
-              Buy
-            </Button>
-            <Button
-              sx={{
-                color: "#c7c7c7",
-                border: "1px solid #929292",
-                borderRadius: "2px",
-                backgroundColor: "#7c7c7c",
-                marginRight: "0.5rem"
-              }}
-              variant="outlined"
-              size="small"
-            >
-              Sell
-            </Button>
-            <Button
-              sx={{
-                color: "#c7c7c7",
-                border: "1px solid #929292",
-                borderRadius: "2px",
-                backgroundColor: "#7c7c7c",
-              }}
-              variant="outlined"
-              size="small"
-            >
-              Convert
-            </Button>
-          </div>
-        </div>
+        <Header headerText={"Trade"} />
         <div className="contentContainer"> 
           <div className="searchBar">
-            <ThemeProvider theme={theme}>
+            <ThemeProvider theme={getTheme()}>
               <TextField
-                id="filled-search"
+                id="asset"
                 label="Search Assets"
                 type="search"
                 size="small"
                 color="primary"
+                onChange={handleChange}
+                value={asset}
                 InputLabelProps={{
                   style: { color: '#aaaaaa' },
                 }}
@@ -83,8 +41,8 @@ const Trade = () => {
             </ThemeProvider>
           </div>
           <div className="listContainer">
-            <ul className="cryptoList">
-              {HandleTrade()}
+            <ul className="displayCryptoContent">
+              {filterAsset(asset)}
             </ul>
           </div>
         </div>

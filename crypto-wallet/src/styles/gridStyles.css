@@ -17,6 +17,32 @@ Adds a border around all elements of a page
     height: 100%;
 }
 
+.headerContainer {
+    display: flex;
+    border-bottom: 2px solid #aaaaaa;
+}
+
+.headerText {
+    display: flex;
+    flex: 0 0 50%;
+    justify-content: flex-start;
+    margin-left: 1em;
+}
+
+.buttonContainer {
+    display: flex;
+    flex: 50% 0 0;
+    justify-content: flex-end;
+    padding-right: 1em;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+}
+
 .balanceContainer, .indexContainer {
     justify-content: center;
 }
@@ -35,4 +61,27 @@ Adds a border around all elements of a page
     align-items: center;
     font-size: 20px;
     padding-top: 6rem;
+}
+
+.listContainer {
+    position: relative;
+}
+
+.displayCryptoContent {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #aaaaaa;
+}
+
+@media screen and (max-width: 1120px) {
+    .displayCryptoContent {
+        left: 13vw;
+        min-width: 77vw;
+    }
+}
+
+@media screen and (min-width: 1121px) {
+    .displayCryptoContent {
+        left: 10.8vw;
+    }
 }
