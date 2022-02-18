@@ -55,26 +55,6 @@ const ButtonBar = () => {
         <img className="buttonIcon" src={buyIcon} alt="+"/>
       </Button>
         <BuyPopover anchorEl={buyPopover} setPopover={setBuyPopover} />
-      {/*
-      
-      <Popover
-        id={id}
-        open={open}
-        anchorEl={anchorEl}
-        onClose={handleClose}
-        anchorOrigin={{
-          vertical: "center",
-          horizontal: "center"
-        }}
-        transformOrigin={{
-          vertical: "center",
-          horizontal: "center"
-        }}
-      >
-        <Typography>Buy / Receive</Typography>
-      </Popover>
-      <BuyPopover anchorEl={anchorEl} setAnchorEl={setAnchorEl} />
-      */}
       <Button
         sx={{
           color: "#dbdbdb",
@@ -97,26 +77,6 @@ const ButtonBar = () => {
         <img className="buttonIcon" src={sellIcon} alt="-"/>
       </Button>
       <SellPopover anchorEl={sellPopover} setPopover={setSellPopover} />
-      {/*
-      <SellPopover anchorEl={anchorEl} setAnchorEl={setAnchorEl} />
-      
-      <Popover
-        id={id}
-        open={open}
-        anchorEl={anchorEl}
-        onClose={handleClose}
-        anchorOrigin={{
-          vertical: "center",
-          horizontal: "center"
-        }}
-        transformOrigin={{
-          vertical: "center",
-          horizontal: "center"
-        }}
-      >
-        <Typography>Sell / Send</Typography>
-      </Popover>
-      */}
     </div>
   );
 }
