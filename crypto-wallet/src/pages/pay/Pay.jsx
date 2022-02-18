@@ -10,6 +10,7 @@ const Pay = () => {
       <div className="contactContainer">
         <Header headerText="Pay" />
         <div className="contentContainer">
+          
         </div>
       </div>
     </div>
