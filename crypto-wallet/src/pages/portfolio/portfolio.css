@@ -1,8 +1,6 @@
 .portfolioList {
-    position: relative;
-    margin-right: 4rem;
-    right: 4rem;
-    top: 7rem;
+    display: inline-block;
+    margin: 3em 1em 0 1em;
 }
 
 .listHeader {

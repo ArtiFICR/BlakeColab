@@ -1,0 +1,36 @@
+.payContainer {
+    display: flex;
+    height: 100%;
+    margin-top: 5em;
+}
+
+.payComponentHeader {
+    border-bottom: 1px solid #aaaaaa;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.amountToSend {
+    text-align: center;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+}
+
+.payInputContainer {
+    border-top: 1px solid #aaaaaa;
+    display: flex;
+    flex-direction: column;
+}
+
+.selectAsset, .walletToPay, .toMessage {
+    display: inline-flex;
+    padding: 1em 1em 0 1em;
+}
+
+.selectAsset, .walletToPay {
+    border-bottom: 1px solid #aaaaaa;
+}
+
+.selectAssetInput, .toWalletInput, .messageInput {
+    padding-left: 1em;
+}
