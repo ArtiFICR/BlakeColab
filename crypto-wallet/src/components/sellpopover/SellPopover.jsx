@@ -1,5 +1,5 @@
 import React from "react";
-import { Popover, Button, createTheme, ThemeProvider } from "@mui/material";
+import { Popover, Button, createTheme, ThemeProvider, TextField } from "@mui/material";
 
 import "./sellpopover.css";
 
@@ -12,14 +12,16 @@ const theme = createTheme({
 });
 
 const SellPopover = ({anchorEl, setPopover}) => {
-    function handleClose() {
-      setPopover(null);
-    }
+  let count = 0;
+  function handleClose() {
+    setPopover(null);
+  }
 
-    const open = Boolean(anchorEl);
-    const id = open ? "simple-popover" : undefined;
+  const open = Boolean(anchorEl);
+  const id = open ? "simple-popover" : undefined;
 
-    return(
+  return(
+    <div className="popoverContainer">
       <Popover
         id={id}
         open={open}
@@ -41,14 +43,42 @@ const SellPopover = ({anchorEl, setPopover}) => {
           },
         }}
       >
-        <p>Sell</p>
+        <div className="popoverHeader">
+          <p className="sellHeaderText">Sell</p>
+          <p className="sendHeaderText">Send</p>
+        </div>
+        <div className="amountSold">{count}</div>
+        <div className="assetToSellContainer">
+          <p className="assetInputText">Asset:</p>
+          <TextField 
+            width="20px" 
+            size="small"
+            className="amountToSellInput"
+            sx={{
+              width: "10em",
+              marginRight: "0.5em",
+              paddingRight: "3em",
+            }}
+          />
+        </div>
         <div className="popoverButton">
           <ThemeProvider theme={theme}>
-            <Button variant="contained">Sell</Button>
+            <Button
+              color="primary"
+              variant="contained"
+              PaperProps={{
+                style: {
+                  backgroundColor: 'red',
+                },
+              }}
+            >
+              Sell
+            </Button>
           </ThemeProvider>
         </div>
       </Popover>
-    );
+    </div>
+  );
 }
 
 export default SellPopover;

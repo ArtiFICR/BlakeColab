@@ -1,11 +1,60 @@
+.popoverContainer {
+    display: flex;
+}
+
 .popover {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
+.popoverHeader {
+    display: flex;
+    border-bottom: solid 2px #86898a;
+    color: #404141;
+}
+
+.buyHeaderText {
+    float: left;
+    padding-left: 4em;
+}
+
+.receiveHeaderText {
+    float: right;
+    margin-left: auto;
+    padding-right: 4em;
+}
+
+.amountBought {
+    position: relative;
+    padding-left: 50%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+.assetToBuyContainer {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    border-top: 2px solid #86898a;
+    padding-top: 2em;
+}
+
+.assetInputText {
+    flex: 1;
+    padding-left: 3.3em;
+}
+
+.amountToBuyInput {
+    margin-right: 3em;
+}
+
 .popoverButton {
     display: grid;
     margin-left: auto;
+    margin-right: auto;
     justify-content: center;
+    padding-top: 15%;
 }
