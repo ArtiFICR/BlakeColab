@@ -1,7 +1,15 @@
 import React from "react";
-import { Popover, Typography } from "@mui/material";
+import { Popover, Button, createTheme, ThemeProvider } from "@mui/material";
 
 import "./buypopover.css";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#86898a",
+    },
+  }
+});
 
 const BuyPopover = ({anchorEl, setPopover}) => {
   function handleClose() {
@@ -25,15 +33,30 @@ const BuyPopover = ({anchorEl, setPopover}) => {
         vertical: "top",
         horizontal: "center"
       }}
+      PaperProps={{
+        style: { 
+          width: '20rem',
+          height: '25rem',
+          backgroundColor: '#d6d6d6',
+        },
+      }}
     >
-      <Typography sx={{
-        paddingTop: "5rem",
-        paddingLeft: "2rem",
-        paddingRight: "2rem",
-        height: "100px"
-      }}>
-        Buy / Receive
-      </Typography>
+      <p>Buy</p>
+      <div className="popoverButton">
+        <ThemeProvider theme={theme}>
+          <Button
+            color="primary"
+            variant="contained"
+            PaperProps={{
+              style: {
+                backgroundColor: 'red',
+              },
+            }}
+          >
+            Buy
+          </Button>
+        </ThemeProvider>
+      </div>
     </Popover>
   );
 }

@@ -3,12 +3,18 @@ import Navbar from "../../components/navbar/Navbar";
 import Header from "../../components/header/Header";
 import { Box, TextField } from "@mui/material";
 import AssetDropdown from "../../components/assetdropdown/AssetDropdown";
+import FilterAsset from "../../components/filterasset/FilterAsset";
 
 import "../../styles/gridStyles.css";
 import "./pay.css";
 
 const Pay = () => {
-  const [asset] = React.useState('');
+  const [asset, setAsset] = React.useState('');
+
+  const handleChange = (event) => {
+    let asset = event.target.value;
+    setAsset(asset);
+  }
 
   return (
     <div className="gridContainer">
@@ -20,7 +26,6 @@ const Pay = () => {
             <Box
               sx={{
                 margin: "auto",
-                height: "33rem",
                 width: "45%", 
                 '@media (max-width: 1120px)' : {
                   width: '85%'
@@ -32,11 +37,11 @@ const Pay = () => {
               }}
             >
               <p className="payComponentHeader">Pay</p>
-              <div className="amountToSend">amtToSendInUSD</div>
+              <div className="amountToSend">{FilterAsset(asset)}</div>
               <div className="payInputContainer">
                 <nav className="selectAsset">
                   <p className="selectAssetLabel">Pay with:</p>
-                  <AssetDropdown asset={asset} />
+                  <AssetDropdown asset={asset} onChange={handleChange} />
                 </nav>
                 <nav className="walletToPay">
                   <p className="toWalletLabel">To:</p> 

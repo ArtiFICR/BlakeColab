@@ -11,13 +11,13 @@ import "../../styles/gridStyles.css";
 import './assets.css';
 
 const Assets = () => {
-  const [asset] = React.useState('');
-  /*
+  const [asset, setAsset] = React.useState('');
 
   const handleChange = (event) => {
-    setAsset(event.target.value);
+    let asset = event.target.value;
+    setAsset(asset);
   }
-  */
+  
   return (
     <div className="gridContainer">
       <Navbar />
@@ -31,7 +31,7 @@ const Assets = () => {
           <div className="listContainer">
             <ul className="displayCryptoContent">
               <div className="dropdownContainer">
-                <AssetDropdown asset={asset} />
+                <AssetDropdown onChange={handleChange} />
                 <div className="assetList">
                   {filterAsset(asset)}
                 </div>

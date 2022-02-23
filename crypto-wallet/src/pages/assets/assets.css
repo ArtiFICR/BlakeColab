@@ -24,14 +24,11 @@
 }
 
 .chartContainer {
-    position: fixed;
-    border: 1px solid #929292;
-    right: 1.35vw;
-    bottom: 1rem;
-    top: 11.5rem;
-    left: 11.3vw;
-    background-color: #888888;
-    color: #d4d4d4;
+  border: 1px solid #929292;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #888888;
+  color: #d4d4d4;
 }
 
 .chartTitle {

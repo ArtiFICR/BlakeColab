@@ -6,7 +6,8 @@ const AssetDropdown = () => {
     const [asset, setAsset] = React.useState('');
 
     const handleChange = (event) => {
-      setAsset(event.target.value);
+      let asset = event.target.value;
+      setAsset(asset);
     }
 
     return(
@@ -15,7 +16,7 @@ const AssetDropdown = () => {
               <Box sx={{ minWidth: 100 }}>
                 <FormControl
                   size="medium"
-                  >
+                >
                   <Select
                     value={asset}
                     onChange={handleChange}
