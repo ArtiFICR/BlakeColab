@@ -21,14 +21,19 @@
     display: flex;
     flex-direction: column;
 }
-
 .selectAsset, .walletToPay, .toMessage {
     display: inline-flex;
-    padding: 1em 1em 0 1em;
+    padding: 0 1em 0 1em;
+    align-items: center;
 }
 
 .selectAsset, .walletToPay {
     border-bottom: 1px solid #aaaaaa;
+}
+
+.selectAssetLabel, .toWalletLabel, .messageLabel {
+    padding-right: 1em;
+    padding-bottom: 10px;
 }
 
 .selectAssetInput, .toWalletInput, .messageInput {

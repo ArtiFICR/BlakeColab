@@ -1,11 +1,15 @@
+import React from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Header from "../../components/header/Header";
 import { Box, TextField } from "@mui/material";
+import AssetDropdown from "../../components/assetdropdown/AssetDropdown";
 
 import "../../styles/gridStyles.css";
 import "./pay.css";
 
 const Pay = () => {
+  const [asset] = React.useState('');
+
   return (
     <div className="gridContainer">
       <Navbar />
@@ -16,8 +20,11 @@ const Pay = () => {
             <Box
               sx={{
                 margin: "auto",
-                height: "36rem",
-                width: "45rem",
+                height: "33rem",
+                width: "45%", 
+                '@media (max-width: 1120px)' : {
+                  width: '85%'
+                },
                 backgroundColor: "#656a6b",
                 borderRadius: "5px",
                 border: "1px solid #aaaaaa",
@@ -29,11 +36,7 @@ const Pay = () => {
               <div className="payInputContainer">
                 <nav className="selectAsset">
                   <p className="selectAssetLabel">Pay with:</p>
-                  <TextField 
-                    fullWidth
-                    size="small"
-                    className="selectAssetInput"
-                  />
+                  <AssetDropdown asset={asset} />
                 </nav>
                 <nav className="walletToPay">
                   <p className="toWalletLabel">To:</p> 
