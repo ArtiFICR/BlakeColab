@@ -1,6 +1,5 @@
 import React from "react";
 import { Popover, Button, createTheme, ThemeProvider, TextField } from "@mui/material";
-//import amountCounter from "../amountcounter/AmountCounter";
 
 import "./buypopover.css";
 
