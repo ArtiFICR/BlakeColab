@@ -1,0 +1,33 @@
+.totalAmount {
+    position: relative;
+    padding-left: 50%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+.assetInputContainer {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    border-top: 2px solid #86898a;
+    padding-top: 2em;
+}
+
+.assetInputText {
+    flex: 1;
+    padding-left: 3.3em;
+}
+
+.totalAmountInput {
+    margin-right: 3em;
+}
+
+.popoverButton {
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    padding-top: 15%;
+}

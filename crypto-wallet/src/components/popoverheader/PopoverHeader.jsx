@@ -1,18 +1,21 @@
 import { Button } from "@mui/material";
 
-const PopoverHeader = (leftTabText, rightTabText) => {
+import "./popoverheader.css";
+
+const PopoverHeader = ({leftTabText, rightTabText}) => {
     return(
         <>
             <div className="popoverHeader">
                 <Button 
                   variant="text"
                   sx={{
-                    borderRight: "0px solid #86898a",
+                    borderRight: "2px solid #86898a",
                     borderRadius: "0px",
                     color: "black",
                     display: "flex",
                     marginLeft: "auto",
                     marginRight: "auto",
+                    width: "100%",
                   }}
                 >
                   {leftTabText}
@@ -24,6 +27,7 @@ const PopoverHeader = (leftTabText, rightTabText) => {
                     display: "flex",
                     marginRight: "auto",
                     marginLeft: "auto",
+                    width: "100%",
                   }}
                 >
                   {rightTabText}

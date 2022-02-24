@@ -1,15 +1,9 @@
 import React from "react";
-import { Popover, Button, createTheme, ThemeProvider, TextField } from "@mui/material";
+import { Popover } from "@mui/material";
+import PopoverHeader from "../popoverheader/PopoverHeader";
+import PopoverBody from "../popoverbody/PopoverBody";
 
 import "./sellpopover.css";
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: "#86898a",
-    },
-  }
-});
 
 const SellPopover = ({anchorEl, setPopover}) => {
   let count = 0;
@@ -43,63 +37,8 @@ const SellPopover = ({anchorEl, setPopover}) => {
           },
         }}
       >
-        <div className="popoverHeader">
-          <Button 
-            variant="text"
-            sx={{
-              borderRight: "2px solid #86898a",
-              borderRadius: "0px",
-              color: "black",
-              display: "flex",
-              marginLeft: "auto",
-              marginRight: "auto",
-              width: "100%",
-            }}
-          >
-            Sell
-          </Button>
-          <Button
-            variant="text"
-            sx={{
-              color: "black",
-              display: "flex",
-              marginRight: "auto",
-              marginLeft: "auto",
-              width: "100%",
-            }}
-          >
-            Send
-          </Button>
-        </div>
-        <div className="amountSold">{count}</div>
-        <div className="assetToSellContainer">
-          <p className="assetInputText">Asset:</p>
-          <TextField 
-            width="20px" 
-            size="small"
-            className="amountToSellInput"
-            sx={{
-              width: "10em",
-              marginRight: "0.5em",
-              paddingRight: "3em",
-            }}
-          />
-        </div>
-        <div className="popoverButton">
-          <ThemeProvider theme={theme}>
-            <Button
-              color="primary"
-              variant="contained"
-              PaperProps={{
-                style: {
-                  backgroundColor: 'red',
-                },
-              }}
-            >
-              Sell
-            </Button>
-          </ThemeProvider>
-        </div>
+        <PopoverHeader leftTabText="Sell" rightTabText="Send" />
+        <PopoverBody count={count} buttonText="Sell" />
       </Popover>
     </div>
   );
