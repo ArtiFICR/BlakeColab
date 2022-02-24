@@ -44,8 +44,32 @@ const SellPopover = ({anchorEl, setPopover}) => {
         }}
       >
         <div className="popoverHeader">
-          <p className="sellHeaderText">Sell</p>
-          <p className="sendHeaderText">Send</p>
+          <Button 
+            variant="text"
+            sx={{
+              borderRight: "2px solid #86898a",
+              borderRadius: "0px",
+              color: "black",
+              display: "flex",
+              marginLeft: "auto",
+              marginRight: "auto",
+              width: "100%",
+            }}
+          >
+            Sell
+          </Button>
+          <Button
+            variant="text"
+            sx={{
+              color: "black",
+              display: "flex",
+              marginRight: "auto",
+              marginLeft: "auto",
+              width: "100%",
+            }}
+          >
+            Send
+          </Button>
         </div>
         <div className="amountSold">{count}</div>
         <div className="assetToSellContainer">

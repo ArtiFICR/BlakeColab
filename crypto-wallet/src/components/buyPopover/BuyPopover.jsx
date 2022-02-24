@@ -1,5 +1,6 @@
 import React from "react";
 import { Popover, Button, createTheme, ThemeProvider, TextField } from "@mui/material";
+//import PopoverHeader from "../popoverheader/PopoverHeader";
 
 import "./buypopover.css";
 
@@ -27,7 +28,10 @@ const BuyPopover = ({anchorEl, setPopover}) => {
 
   const open = Boolean(anchorEl);
   const id = open ? "simple-popover" : undefined;
-  
+  /*
+  let leftTabText  = "Buy";
+  let rightTabText = "Receive";
+  */
   return(
     <div className="popoverContainer">
       <Popover
@@ -50,11 +54,38 @@ const BuyPopover = ({anchorEl, setPopover}) => {
             backgroundColor: '#d6d6d6',
           },
         }}
-      >
+      >        
         <div className="popoverHeader">
-          <p className="buyHeaderText">Buy</p>
-          <p className="receiveHeaderText">Receive</p>
+          <Button 
+            variant="text"
+            sx={{
+              borderRight: "2px solid #86898a",
+              borderRadius: "0px",
+              color: "black",
+              display: "flex",
+              marginLeft: "auto",
+              marginRight: "auto",
+              width: "100%",
+            }}
+          >
+            Buy
+          </Button>
+          <Button
+            variant="text"
+            sx={{
+              color: "black",
+              display: "flex",
+              marginRight: "auto",
+              marginLeft: "auto",
+              width: "100%",
+            }}
+          >
+            Receive
+          </Button>
         </div>
+        {/*
+        <PopoverHeader leftTabText={leftTabText} rightTabText={rightTabText} />
+        */}
         <div className="amountBought">{count}</div>
         <div className="assetToBuyContainer">
           <p className="assetInputText">Asset:</p>
