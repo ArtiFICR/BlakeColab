@@ -28,7 +28,7 @@ const LoginNavbar = () => {
                             <img className="navbarLogo" src={logo} alt="Logo" />
                             <span className="logoText">Crypto Wallet</span>
                         </div>
-                        <Link to="/" className="navbar-text">
+                        <Link to="/pages/assets" className="navbar-text">
                             <span className="icon"><img className="iconSettings" src={loginIcon} alt=""/></span>
                             <span className="text">Log In</span>
                         </Link>

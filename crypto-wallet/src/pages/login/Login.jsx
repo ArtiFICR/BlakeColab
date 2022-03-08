@@ -27,7 +27,7 @@ class Login extends React.Component {
                         <span className="passwordContainer">Password: <input></input></span>
                         <Button 
                             variant="contained"
-                            href="/"
+                            href="/pages/assets"
                             sx={{
                                 backgroundColor: "#86898a",
                                 "&:hover": {

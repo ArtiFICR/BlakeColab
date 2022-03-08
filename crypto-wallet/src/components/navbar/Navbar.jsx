@@ -34,7 +34,7 @@ const Navbar = () => {
               <span className="logoText">Crypto Wallet</span>
             </div>
 
-            <Link to="/" className="navbar-text">
+            <Link to="/pages/assets" className="navbar-text">
               <span className="icon"><img className="iconSettings" src={assetsIcon} alt=""/></span>
               <span className="text">Assets</span>
             </Link>
@@ -55,7 +55,7 @@ const Navbar = () => {
               <span className="text">Settings</span>
             </Link>
             <div className="logoutTab">
-              <Link to="/pages/login" className="navbar-text">
+              <Link to="/" className="navbar-text">
                 <span className="icon"><img className="iconSettings" src={signoutIcon} alt=""/></span>
                 <span className="text">Sign Out</span>
               </Link>

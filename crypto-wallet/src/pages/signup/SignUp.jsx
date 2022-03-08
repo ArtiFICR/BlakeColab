@@ -20,7 +20,7 @@ class SignUp extends React.Component {
                         <span className="formTab">Password: <input></input></span>
                         <Button 
                             variant="contained"
-                            href="/"
+                            href="/pages/assets"
                             sx={{
                                 marginTop: "2em",
                                 backgroundColor: "#86898a",

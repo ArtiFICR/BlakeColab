@@ -14,12 +14,12 @@ import "./index.css";
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Assets />} />
+      <Route path="/pages/assets" element={<Assets />} />
       <Route path="pages/trade" element={<Trade />} />
       <Route path="pages/portfolio" element={<Portfolio />} />
       <Route path="pages/pay" element={<Pay />} />
       <Route path="pages/settings" element={<Settings />} />
-      <Route path="pages/login" element={<Login />} />
+      <Route path="/" element={<Login />} />
       <Route path="pages/signup" element={<SignUp />} />
     </Routes>
   </BrowserRouter>,
