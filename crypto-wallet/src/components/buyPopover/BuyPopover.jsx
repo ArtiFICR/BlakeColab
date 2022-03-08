@@ -21,6 +21,8 @@ const BuyPopover = ({anchorEl, setPopover}) => {
 
   const open = Boolean(anchorEl);
   const id = open ? "simple-popover" : undefined;
+
+  let buttonText = '';
   
   return(
     <div className="popoverContainer">
@@ -45,7 +47,7 @@ const BuyPopover = ({anchorEl, setPopover}) => {
           },
         }}
       >
-        <PopoverHeader leftTabText="Buy" rightTabText="Receive" />
+        <PopoverHeader leftTabText="Buy" rightTabText="Receive" buttonText={buttonText} />
         <PopoverBody count={count} buttonText="Buy" />
       </Popover>
     </div>

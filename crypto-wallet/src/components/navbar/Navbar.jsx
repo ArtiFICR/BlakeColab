@@ -5,6 +5,7 @@ import tradeIcon from "../../assets/trade.png";
 import portfolioIcon from "../../assets/portfolio.png";
 import settingsIcon from "../../assets/settings.png";
 import contactIcon from "../../assets/contact.png";
+import signoutIcon from "../../assets/signout.png";
 import { Box, Stack } from "@mui/material";
 
 import "./navbar.css";
@@ -53,6 +54,12 @@ const Navbar = () => {
               <span className="icon"><img className="iconSettings" src={settingsIcon} alt=""/></span>
               <span className="text">Settings</span>
             </Link>
+            <div className="logoutTab">
+              <Link to="/pages/login" className="navbar-text">
+                <span className="icon"><img className="iconSettings" src={signoutIcon} alt=""/></span>
+                <span className="text">Sign Out</span>
+              </Link>
+            </div>
           </Stack>
         </div>
       </nav>

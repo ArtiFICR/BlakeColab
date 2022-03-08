@@ -1,0 +1,16 @@
+.signupForm {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #aaaaaa;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15vh;
+    width: 380px;
+    align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+}
+
+.formTab {
+    padding-bottom: 1em;
+}

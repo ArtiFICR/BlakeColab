@@ -30,6 +30,11 @@
   justify-content: center;
 }
 
+.logoutTab {
+  position: absolute;
+  bottom: 2em;
+}
+
 @media screen and (max-width: 1120px) {
   .navbarLogo {
     width: 2.6rem;
