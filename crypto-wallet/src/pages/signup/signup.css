@@ -14,3 +14,12 @@
 .formTab {
     padding-bottom: 1em;
 }
+
+.tabText {
+    display: flex;
+    float: left;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    margin-bottom: auto;
+    margin-top: auto;
+}

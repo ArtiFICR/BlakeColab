@@ -1,7 +1,8 @@
 import React from "react";
-import { Button } from "@mui/material";
+import { Button, TextField, ThemeProvider } from "@mui/material";
 import LoginNavbar from "../../components/loginnavbar/LoginNavbar";
 import LoginHeader from "../../components/loginheader/LoginHeader";
+import getTheme from "../../components/theme/getTheme";
 
 import "../../styles/gridStyles.css";
 import "./login.css";
@@ -11,8 +12,9 @@ class Login extends React.Component {
         super(props);
 
         this.state = {
-            email: '',
-            password: ''
+            user: '',
+            password: '',
+            isLoggedIn: false
         }
     }
 
@@ -23,8 +25,35 @@ class Login extends React.Component {
                 <div className="loginContainer">
                     <LoginHeader headerText={"Login"}/>
                     <div className="loginForm">
-                        <span className="usernameContainer">Username: <input></input></span>
-                        <span className="passwordContainer">Password: <input></input></span>
+                        <div className="usernameContainer">
+                            <p className="usernameTab">Username:</p>
+                            <ThemeProvider theme={getTheme()}>
+                                <TextField
+                                    id="username"
+                                    value={this.state.user}
+                                    size="small"
+                                    color="primary"
+                                    label="Username or Email"
+                                    sx={{
+                                        display: "flex",
+                                        marginTop: "auto",
+                                        marginBottom: "auto",
+                                    }}
+                                />
+                            </ThemeProvider>
+                        </div>
+                        <div className="passwordContainer">
+                            <p className="passwordTab">Password:</p>
+                            <ThemeProvider theme={getTheme()}>
+                                <TextField
+                                    id="password"
+                                    value={this.state.password}
+                                    size="small"
+                                    color="primary"
+                                    label="Password"
+                                />
+                            </ThemeProvider>
+                        </div>
                         <Button 
                             variant="contained"
                             href="/pages/assets"
@@ -36,6 +65,7 @@ class Login extends React.Component {
                                 "&:focus": {
                                     backgroundColor: "#6a6d6e"
                                 },
+                                marginTop: "2em",
                             }}
                         >
                             Login

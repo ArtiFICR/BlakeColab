@@ -7,12 +7,22 @@
     margin-top: 15vh;
     width: 380px;
     align-items: center;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
 }
 
 .usernameContainer, .passwordContainer {
     padding-bottom: 2rem;
+    padding-right: 1em;
+}
+
+.usernameTab, .passwordTab {
+    display: flex;
+    float: left;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    margin-bottom: auto;
+    margin-top: auto;
 }
 
 .buttonSeperator {

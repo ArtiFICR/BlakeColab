@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Header from "../../components/header/Header";
-import { Box, TextField } from "@mui/material";
+import { Box, TextField, Button } from "@mui/material";
 import AssetDropdown from "../../components/assetdropdown/AssetDropdown";
 import FilterAsset from "../../components/filterasset/FilterAsset";
 
@@ -40,27 +40,60 @@ const Pay = () => {
               <div className="amountToSend">{FilterAsset(asset)}</div>
               <div className="payInputContainer">
                 <nav className="selectAsset">
-                  <p className="selectAssetLabel">Pay with:</p>
+                  <p className="formLabel">Pay with:</p>
                   <AssetDropdown asset={asset} onChange={handleChange} />
                 </nav>
+                <nav className="assetAmount">
+                  <p className="formLabel">Amount:</p>
+                  <TextField 
+                    size="small"
+                    className="formInput"
+                    sx={{
+                      width: "8rem"
+                    }}
+                  /> 
+                </nav>
                 <nav className="walletToPay">
-                  <p className="toWalletLabel">To:</p> 
+                  <p className="formLabel">To:</p> 
                   <TextField 
                     fullWidth
                     size="small"
-                    className="toWalletInput"
+                    className="formInput"
+                    sx={{
+                      width: "15rem"
+                    }}
                   />
                 </nav>
                 <nav className="toMessage">
-                  <p className="messageLabel">Message: </p>
+                  <p className="formLabel">Message: </p>
                   <TextField 
                     fullWidth 
                     size="small"
-                    className="messageInput"
+                    className="formInput"
                   />
                 </nav>
               </div>
             </Box>
+            <Button 
+              variant="contained"
+              sx={{
+                display: "flex",
+                marginLeft: "auto",
+                marginRight: "auto",
+                height: "2.5rem",
+                width: "5rem",
+                marginTop: "2rem",
+                backgroundColor: "#86898a",
+                "&:hover": {
+                  backgroundColor: "#9c9c9c"
+                },
+                "&:focus": {
+                    backgroundColor: ""
+                },
+              }}
+            >
+              Pay
+            </Button>
           </div>
         </div>
       </div>

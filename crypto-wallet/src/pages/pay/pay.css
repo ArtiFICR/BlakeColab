@@ -1,5 +1,6 @@
 .payContainer {
     display: flex;
+    flex-direction: column;
     height: 100%;
     margin-top: 5em;
 }
@@ -22,21 +23,21 @@
     flex-direction: column;
 }
 
-.selectAsset, .walletToPay, .toMessage {
+.selectAsset, .walletToPay, .toMessage, .assetAmount {
     display: inline-flex;
     padding: 0 1em 0 1em;
     align-items: center;
 }
 
-.selectAsset, .walletToPay {
+.selectAsset, .walletToPay, .assetAmount {
     border-bottom: 1px solid #aaaaaa;
 }
 
-.selectAssetLabel, .toWalletLabel, .messageLabel {
+.formLabel {
     padding-right: 1em;
     padding-bottom: 10px;
 }
 
-.selectAssetInput, .toWalletInput, .messageInput {
+.formInput {
     padding-left: 1em;
 }
